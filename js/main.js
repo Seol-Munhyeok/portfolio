@@ -1,3 +1,11 @@
-document.addEventListener("DOMContentLoaded", () => {
-  console.log("홍길동의 포트폴리오 페이지가 로드되었습니다.");
-});
+let greeting = 'Hello!';
+
+console.log(greeting);
+
+let nickname = '설문혁';
+let hobby = ['헬스', '수영'];
+
+let person = {
+  nickname: nickname,
+  hobby: hobby,
+};
