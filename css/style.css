@@ -703,7 +703,7 @@ body {
 
   /* Floating Button */
   .floating-button {
-    bottom: 70px;
+    bottom: 25px;
     right: 15px;
   }
 }

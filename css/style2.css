@@ -1,0 +1,237 @@
+/* Hero Section 유지 */
+.project-hero-video {
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.hero-video {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+  object-fit: cover;
+  opacity: 0.9;
+}
+
+.project-hero-video::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4);
+  z-index: 1;
+}
+
+.hero-overlay {
+  position: relative;
+  z-index: 2;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: white;
+  padding: 0 1rem;
+}
+
+.hero-overlay h1 {
+  font-size: 5rem;
+  font-weight: 900;
+  margin-bottom: 1rem;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  letter-spacing: 1px;
+}
+
+.hero-overlay p {
+  font-size: 1.4rem;
+  margin-bottom: 2rem;
+  line-height: 1.5;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+  max-width: 800px;
+}
+
+.hero-button {
+  background-color: #00aacc;
+  color: #fff;
+  font-size: 1.3rem;
+  padding: 1rem 2.5rem;
+  border-radius: 2.5rem;
+  font-weight: 700;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  transition: background-color 0.3s ease, transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.hero-button:hover {
+  background-color: #00aacc;
+  transform: scale(1.08);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+}
+
+.project-section {
+  padding: 5.5rem 0;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.project-section.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.project-section h2 {
+  font-size: 2rem;
+  color: #00aacc;
+  text-align: center;
+  font-weight: 900;
+  margin-bottom: 4rem;
+  position: relative;
+}
+
+.project-section h2::after {
+  position: absolute;
+  content: '';
+  width: 64px;
+  height: 0.25rem;
+  background-color: #00aacc;
+  left: 0;
+  right: 0;
+  top: 3rem;
+  margin: 0 auto;
+}
+
+.project-section p {
+  text-align: center;
+  font-size: 1.1rem;
+  color: #555;
+  margin-bottom: 2rem;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+  line-height: 1.8;
+}
+
+.project-section ul {
+  list-style: none;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+}
+
+.project-section ul li {
+  background-color: #f9f9f9;
+  border-radius: 0.75rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  padding: 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  font-size: 1.1rem;
+  color: #333;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-section ul li:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+}
+
+.project-section ul li::before {
+  content: none;
+}
+
+.project-section ul li span.icon {
+  font-size: 2rem;
+  flex-shrink: 0;
+}
+
+.env__stack-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  padding-left: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.project-section h3 {
+  font-size: 1.3rem;
+  font-weight: 700;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.project-section__image--center {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.project-section__image--center img {
+  max-width: 800px;
+  width: 100%;
+  height: auto;
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.image-slider__wrapper {
+  position: relative;
+  width: 100%;
+  max-width: 800px;
+  margin: 2rem auto;
+}
+
+.image-slider {
+  overflow: hidden;
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.image-slider__track {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+.image-slider__track img {
+  min-width: 100%;
+  height: auto;
+  display: block;
+}
+
+.image-slider__btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: transparent;
+  color: #000;
+  border: none;
+  font-size: 2.5rem;
+  padding: 0;
+  cursor: pointer;
+  z-index: 10;
+}
+
+.image-slider__btn.prev {
+  left: -50px;
+}
+
+.image-slider__btn.next {
+  right: -50px;
+}
+
+.image-slider__btn:hover {
+  color: #333;
+}
