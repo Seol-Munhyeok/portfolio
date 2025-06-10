@@ -49,6 +49,7 @@ body {
   display: flex;
   align-items: center;
   gap: 0.5rem;
+  padding-left: 1rem;
 }
 
 .nav__img {
@@ -449,6 +450,10 @@ body {
   cursor: pointer;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
   transition: 0.3s;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .floating-button:hover {
@@ -514,4 +519,198 @@ body {
   color: #ccc;
   margin-bottom: 1rem;
   line-height: 1.5;
+}
+
+/* 햄버거 버튼 PC에서는 안 보이게 설정 */
+.nav__toggle {
+  display: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: #ffffff;
+  padding-right: 1rem;
+}
+
+/* Toggle button */
+.nav__toggle {
+  display: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: white;
+}
+
+/* 모바일용 메뉴 */
+@media (max-width: 768px) {
+  /* Header */
+  .header {
+    height: auto;
+    padding: 1rem 0;
+  }
+
+  .nav {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    height: auto;
+    padding: 0.1rem 0;
+  }
+
+  .nav__logo {
+    margin-bottom: 0;
+  }
+
+  /* 햄버거 버튼 보이기 */
+  .nav__toggle {
+    display: block;
+  }
+
+  /* 슬라이드 메뉴 */
+  .nav__menu {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 40%;
+    height: 100vh;
+    background-color: rgba(10, 37, 64, 0.9);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: right 0.3s ease;
+    z-index: 200;
+  }
+
+  /* 슬라이드 메뉴 show 상태 */
+  .nav__menu.show-menu {
+    right: 0;
+  }
+
+  /* 슬라이드 메뉴 내 닫기 버튼 */
+  .nav__close {
+    position: absolute;
+    top: 1.5rem;
+    right: 1.5rem;
+    font-size: 1.5rem;
+    color: #ffffff;
+    cursor: pointer;
+    z-index: 999;
+  }
+
+  .nav__list {
+    flex-direction: column;
+    row-gap: 1.5rem;
+  }
+
+  .nav__item {
+    margin-left: 0;
+  }
+
+  /* Section padding 조정 */
+  .section {
+    padding: 3rem 1rem;
+  }
+
+  /* Home */
+  .home__title {
+    font-size: 1.8rem;
+    line-height: 2.5rem;
+  }
+
+  .home__video {
+    width: 100%;
+    max-width: 100%;
+    border-radius: 0.5rem;
+  }
+
+  .home__social {
+    flex-direction: column;
+    row-gap: 1rem;
+  }
+
+  .home__site-link {
+    height: auto;
+  }
+
+  /* About */
+  .about__container {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding-inline: 1rem;
+  }
+
+  .about__img {
+    max-width: 80%;
+    margin-bottom: 1.5rem;
+  }
+
+  .about__data {
+    padding-left: 0;
+  }
+
+  /* Work */
+  .work__container {
+    grid-template-columns: 1fr;
+  }
+
+  .work__img {
+    height: auto;
+  }
+
+  .section__description {
+    font-size: 0.95rem;
+  }
+
+  /* Tech */
+  .tech-card__container {
+    grid-template-columns: 1fr;
+  }
+
+  .tech-tags {
+    font-size: 1.5rem;
+    gap: 1rem;
+  }
+
+  /* Certificates */
+  .certificates__list li {
+    font-size: 0.95rem;
+    padding-left: 1.5rem;
+  }
+
+  .certificates__year {
+    float: none;
+    display: block;
+    margin-top: 0.3rem;
+  }
+
+  /* Footer */
+  .footer {
+    padding: 2rem 1rem;
+  }
+
+  .footer__title {
+    font-size: 1.5rem;
+  }
+
+  .footer__social {
+    flex-direction: column;
+    row-gap: 1rem;
+  }
+
+  .footer__info,
+  .footer__copy {
+    font-size: 0.8rem;
+  }
+
+  /* Floating Button */
+  .floating-button {
+    bottom: 70px;
+    right: 15px;
+  }
+}
+
+/* PC에서는 X 닫기 버튼 숨기기 */
+@media (min-width: 769px) {
+  .nav__close {
+    display: none;
+  }
 }

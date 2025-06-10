@@ -24,8 +24,17 @@
           <a href="#" class="nav__brand">설문혁 포트폴리오</a>
         </div>
 
+        <!-- 햄버거 버튼(모바일 전용)-->
+        <div class="nav__toggle" id="nav-toggle">
+          <i class="fas fa-bars"></i>
+        </div>
+
         <!--메뉴-->
         <div class="nav__menu" id="nav__menu">
+          <!-- 닫기 버튼 -->
+          <div class="nav__close" id="nav-close">
+            <i class="fas fa-times"></i>
+          </div>
           <ul class="nav__list">
             <li class="nav__item">
               <a href="#home" class="nav__link">Home</a>
@@ -287,6 +296,14 @@
         </div>
       </section>
     </main>
+
+    <!-- Floating Button -->
+    <div
+      class="floating-button"
+      onclick="window.scrollTo({top: 0, behavior: 'smooth'})"
+    >
+      <i class="fas fa-arrow-up floating-button-icon"></i>
+    </div>
 
     <!-- Footer -->
     <footer class="footer">
