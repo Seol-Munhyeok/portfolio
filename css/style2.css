@@ -235,3 +235,82 @@
 .image-slider__btn:hover {
   color: #333;
 }
+
+.problem-type-cards {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+  padding: 0 2rem;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.problem-type-card {
+  background-color: #0f1a2b;
+  border-radius: 1rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  padding: 1.5rem 1rem 1rem 1rem;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease,
+    background-color 0.3s ease;
+  color: #fff;
+}
+
+.problem-type-card:hover {
+  transform: translateY(-5px) scale(1.02);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+  background-color: #152640;
+}
+
+.problem-type-card img {
+  width: 130%;
+  max-width: 220px;
+  height: auto;
+  margin-bottom: 1rem;
+  border-radius: 0.5rem;
+}
+
+.problem-type-card h3 {
+  font-size: 1.3rem;
+  font-weight: 900;
+  margin-top: 0.35rem;
+  margin-bottom: 0.85rem;
+  color: #ffcc00;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.problem-type-card p {
+  font-size: 0.95rem;
+  color: #ccc;
+  line-height: 1.5;
+  margin: 0;
+  padding: 0 0.5rem;
+}
+
+/* 반응형 대응 */
+@media (max-width: 1200px) {
+  .problem-type-cards {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .problem-type-cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 830px) {
+  .image-slider__btn.prev {
+    left: 10px;
+    color: #fff; /* 작은 화면에서 흰색으로 */
+  }
+
+  .image-slider__btn.next {
+    right: 10px;
+    color: #fff; /* 작은 화면에서 흰색으로 */
+  }
+}
