@@ -20,7 +20,7 @@
       <nav class="nav container">
         <!--이미지(로고)-->
         <div class="nav__logo">
-          <img class="nav__img" src="media/logo-trans.png" alt="Bgi Logo" />
+          <img class="nav__img" src="media/logo-trans.png" alt="Seol Logo" />
           <a href="#" class="nav__brand">설문혁 포트폴리오</a>
         </div>
 
@@ -31,13 +31,13 @@
               <a href="#home" class="nav__link">Home</a>
             </li>
             <li class="nav__item">
+              <a href="#about" class="nav__link">About</a>
+            </li>
+            <li class="nav__item">
               <a href="#work" class="nav__link">Work</a>
             </li>
             <li class="nav__item">
               <a href="#tech" class="nav__link">Tech</a>
-            </li>
-            <li class="nav__item">
-              <a href="#about" class="nav__link">About</a>
             </li>
             <li class="nav__item">
               <a href="#certificates" class="nav__link">Certificates</a>
@@ -49,17 +49,37 @@
     <main>
       <!-- Home -->
       <section class="home container section" id="home">
-        <!-- Home Data -->
-        <div class="home__data">
-          <h2 class="home__title">
-            안녕하세요! <br />
+        <div class="home__content">
+          <h2 class="home__title home__fade-in-block">
+            안녕하세요!<br />
             <strong class="home__title-color"
-              >웹 개발에 관심이 많은 개발자</strong
-            ><br />
+              >기획부터 배포까지, <br />
+              전 과정을 경험해온 웹 개발자</strong
+            >
             <strong class="home__title-color">설문혁</strong>입니다!
           </h2>
 
+          <!-- Home Video -->
+          <video
+            class="home__video"
+            src="./media/battlecoding-demo.mp4"
+            autoplay
+            muted
+            loop
+            playsinline
+          ></video>
+
+          <!-- Home Social -->
           <div class="home__social">
+            <a
+              href="https://battlecoding.kro.kr"
+              target="_blank"
+              class="home__site-link"
+              title="Battle Coding 사이트 방문하기"
+            >
+              사이트 방문하기
+            </a>
+
             <a
               href="https://github.com/Seol-Munhyeok"
               target="_blank"
@@ -77,44 +97,75 @@
             </a>
           </div>
         </div>
+      </section>
 
-        <!-- Home Video -->
-        <video
-          class="home__video"
-          src="./media/battlecoding-demo.mp4"
-          autoplay
-          muted
-          loop
-          playsinline
-        ></video>
+      <!-- About -->
+      <section class="section bg-grey-1" id="about">
+        <h2 class="section__title">About</h2>
+
+        <div class="about__container container">
+          <img
+            class="about__img"
+            src="./media/about2.JPG"
+            alt="프로젝트 발표 사진"
+          />
+
+          <div class="about__data">
+            <h3 class="about__subtitle">
+              기획과 개발, 배포까지 함께하는 개발자
+            </h3>
+            <p class="about__text">
+              동아리 프로젝트부터 캡스톤디자인, 개인 사이드 프로젝트까지 다양한
+              개발 경험을 쌓아왔습니다.
+              <br /><br />
+              주로 <strong>백엔드(Spring Boot, JPA)</strong> 개발을 중심으로
+              하고 있으며,
+              <strong>프론트엔드(Vue.js, HTML/CSS, JavaScript)</strong>에서도
+              사용자 경험을 고려한 UI 개발을 함께 진행해왔습니다. <br /><br />
+              팀 프로젝트에서는
+              <strong>기획부터 디자인, 개발, 발표 및 배포</strong>까지 전 과정을
+              경험하며 협업 역량을 키웠고, 앞으로도 기술에 대한 호기심과 꾸준한
+              학습을 통해 <strong>풀스택 역량을 갖춘 개발자</strong>로
+              성장하고자 합니다.
+            </p>
+          </div>
+        </div>
       </section>
 
       <!-- Works -->
-      <section class="work section bg-grey-1" id="work">
+      <section class="work section" id="work">
         <h2 class="section__title">Work</h2>
+        <p class="section__description">
+          이미지를 클릭하면 프로젝트 상세 페이지로 이동합니다.
+        </p>
         <div class="work__container container">
           <a
-            class="work__link"
+            class="work__link work__link--overlay"
             href="https://battlecoding.kro.kr/"
             target="_blank"
-            title="Battle Coding 프로젝트"
+            title="Battle Coding"
           >
             <img
               class="work__img"
-              src="./media/battlecoding1.png"
+              src="./media/battlecoding3.png"
               alt="배틀코딩 이미지"
             />
           </a>
 
-          <a class="work__link" href="" target="_blank" title="coby 프로젝트">
-            <img class="work__img" src="./media/coby1.png" alt="coby 이미지" />
+          <a
+            class="work__link work__link--overlay"
+            href=""
+            target="_blank"
+            title="COBY"
+          >
+            <img class="work__img" src="./media/coby2.png" alt="coby 이미지" />
           </a>
 
           <a
-            class="work__link"
+            class="work__link work__link--overlay"
             href=""
             target="_blank"
-            title="GS THE FRESH 사전예약 자동화 프로젝트"
+            title="GS THE FRESH 사전예약 시스템"
           >
             <img class="work__img" src="./media/gs2.png" alt="GS 이미지" />
           </a>
@@ -142,155 +193,101 @@
               alt="디폴트 이미지"
             />
           </a>
-          <a href="battlecoding-detail.html" class="button work__button">
-            BattleCoding 자세히 알아보기
-          </a>
         </div>
       </section>
 
       <!-- Tech Stack -->
-      <section class="tech section" id="tech">
+      <section class="tech section bg-grey-1" id="tech">
         <h2 class="section__title">Tech Stack</h2>
-
-        <div class="tech__container container">
-          <!-- 데이터 영역 -->
-          <div>
-            <h3 class="tech__subtitle">Professional tech</h3>
-            <p class="tech__text">
-              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Earum
-              assumenda nihil dolores? Unde minus beatae fugit non
-              exercitationem asperiores velit, officiis vero cupiditate, odit
-              quo, itaque perspiciatis placeat eveniet sequi!
-            </p>
-            <div>
-              <article class="tech__data">
-                <div class="tech__names">
-                  <!-- icon -->
-                  <i class="fa-brands fa-html5 tech__icon"></i>
-                  <!-- skill name -->
-                  <span class="tech__name">HTML5</span>
-                </div>
-                <div>
-                  <!-- percentage -->
-                  <span class="tech__percentage">85%</span>
-                </div>
-
-                <progress
-                  class="tech__progress"
-                  id="html5"
-                  max="100"
-                  value="85"
-                ></progress>
-              </article>
-
-              <article class="tech__data">
-                <div class="tech__names">
-                  <!-- icon -->
-                  <i class="fa-brands fa-css3-alt tech__icon"></i>
-                  <!-- skill name -->
-                  <span class="tech__name">CSS3</span>
-                </div>
-                <div>
-                  <!-- percentage -->
-                  <span class="tech__percentage">80%</span>
-                </div>
-
-                <progress
-                  class="tech__progress"
-                  id="css3"
-                  max="100"
-                  value="80"
-                ></progress>
-              </article>
-
-              <article class="tech__data">
-                <div class="tech__names">
-                  <!-- icon -->
-                  <i class="fa-brands fa-js tech__icon"></i>
-                  <!-- skill name -->
-                  <span class="tech__name">Javascript</span>
-                </div>
-                <div>
-                  <!-- percentage -->
-                  <span class="tech__percentage">90%</span>
-                </div>
-
-                <progress
-                  class="tech__progress"
-                  id="javascript"
-                  max="100"
-                  value="90"
-                ></progress>
-              </article>
-
-              <article class="tech__data">
-                <div class="tech__names">
-                  <!-- icon -->
-                  <i class="fa-solid fa-server tech__icon"></i>
-                  <!-- skill name -->
-                  <span class="tech__name">Backend</span>
-                </div>
-                <div>
-                  <!-- percentage -->
-                  <span class="tech__percentage">95%</span>
-                </div>
-
-                <progress
-                  class="tech__progress"
-                  id="backend"
-                  max="100"
-                  value="95"
-                ></progress>
-              </article>
-            </div>
+        <div class="tech-card__container container">
+          <!-- Backend -->
+          <div class="tech-card backend">
+            <h3 class="tech-card__title">
+              <i class="fas fa-server"></i> Backend
+            </h3>
+            <ul class="tech-card__list">
+              <li><i class="fas fa-leaf"></i> Spring Boot</li>
+              <li><i class="fas fa-database"></i> JPA</li>
+              <li><i class="fas fa-database"></i> MySQL / MariaDB</li>
+              <li><i class="fas fa-key"></i> JWT / OAuth2</li>
+            </ul>
           </div>
 
-          <!-- 이미지 영역 -->
-          <div>
-            <img
-              class="tech__img"
-              src="./media/tech-img.png"
-              alt="스킬 이미지"
-            />
+          <!-- Frontend -->
+          <div class="tech-card frontend">
+            <h3 class="tech-card__title">
+              <i class="fab fa-vuejs"></i> Frontend
+            </h3>
+            <ul class="tech-card__list">
+              <li><i class="fab fa-vuejs"></i> Vue.js</li>
+              <li><i class="fab fa-html5"></i> HTML5 / CSS3</li>
+              <li><i class="fab fa-js"></i> JavaScript (ES6+)</li>
+            </ul>
+          </div>
+
+          <!-- DevOps & Infra -->
+          <div class="tech-card devops">
+            <h3 class="tech-card__title">
+              <i class="fab fa-docker"></i> DevOps & Infra
+            </h3>
+            <ul class="tech-card__list">
+              <li><i class="fab fa-docker"></i> Docker</li>
+              <li><i class="fab fa-aws"></i> AWS EC2 / RDS</li>
+              <li><i class="fab fa-git-alt"></i> Git / GitHub</li>
+            </ul>
           </div>
         </div>
-      </section>
 
-      <!-- About -->
-      <section class="section bg-grey-1" id="about">
-        <h2 class="section__title">About</h2>
-
-        <div class="about__container container">
-          <img
-            class="about__img"
-            src="./media/about2.JPG"
-            alt="프로젝트 발표 사진"
-          />
-
-          <div class="about__data">
-            <h3 class="about__subtitle">저는 이렇게 답합니다.</h3>
-            <p class="about__text">
-              Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-              Inventore ab aliquam dolores optio id, eaque nesciunt porro
-              debitis iste, ad pariatur a illum quo incidunt, dolorum sequi
-              quasi quod minima.
-            </p>
-          </div>
+        <!-- Icon Wall -->
+        <div class="tech-tags">
+          <i class="fab fa-java"></i>
+          <i class="fas fa-leaf"></i>
+          <i class="fas fa-database"></i>
+          <i class="fab fa-vuejs"></i>
+          <i class="fab fa-html5"></i>
+          <i class="fab fa-css3-alt"></i>
+          <i class="fab fa-js"></i>
+          <i class="fab fa-docker"></i>
+          <i class="fab fa-aws"></i>
+          <i class="fab fa-git-alt"></i>
         </div>
       </section>
 
       <!-- Certificates -->
       <section class="section" id="certificates">
-        <h2 class="section__title">Certificates</h2>
+        <h2 class="section__title">Certificates & Awards</h2>
         <div class="certificates__container container">
-          <ul>
-            <li>정보처리기사 취득 - 2024년</li>
-            <li>TOEIC 870점 - 2020년</li>
-            <!-- 여기에 추가적으로 적으면 됨 -->
+          <ul class="certificates__list">
+            <li>
+              <i class="fas fa-award"></i>
+              2024-1학기 프로그래밍 경진대회 장려상
+              <span class="certificates__year">2024년</span>
+            </li>
+            <li>
+              <i class="fas fa-award"></i>
+              2024-2학기 소프트웨어융합혁신원 프로그래밍 경진대회 우수상
+              <span class="certificates__year">2024년</span>
+            </li>
+            <li>
+              <i class="fas fa-graduation-cap"></i>
+              SW중심대학 역량강화 Camp (AWS AI Cloud 활용 및 자격 과정) 수료
+              <span class="certificates__year">2024년</span>
+            </li>
+            <li>
+              <i class="fas fa-certificate"></i>
+              정보처리기사 취득
+              <span class="certificates__year">2025년</span>
+            </li>
+            <li>
+              <i class="fas fa-award"></i>
+              2025-1학기 프로그래밍 경진대회 장려상
+              <span class="certificates__year">2025년</span>
+            </li>
           </ul>
         </div>
       </section>
     </main>
+
     <!-- Footer -->
     <footer class="footer">
       <p class="footer__title">설문혁</p>

@@ -1,11 +1,16 @@
-let greeting = 'Hello!';
+// main.js
+const sections = document.querySelectorAll('.section');
+const options = { threshold: 0.1 };
 
-console.log(greeting);
+const observer = new IntersectionObserver((entries, observer) => {
+  entries.forEach((entry) => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('visible');
+      observer.unobserve(entry.target);
+    }
+  });
+}, options);
 
-let nickname = '설문혁';
-let hobby = ['헬스', '수영'];
-
-let person = {
-  nickname: nickname,
-  hobby: hobby,
-};
+sections.forEach((section) => {
+  observer.observe(section);
+});
