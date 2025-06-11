@@ -251,7 +251,7 @@
 .image-slider__wrapper {
   position: relative;
   width: 100%;
-  max-width: 800px;
+  max-width: 850px;
   margin: 2rem auto;
 }
 
@@ -286,11 +286,11 @@
 }
 
 .image-slider__btn.prev {
-  left: -50px;
+  left: -55px;
 }
 
 .image-slider__btn.next {
-  right: -50px;
+  right: -55px;
 }
 
 .image-slider__btn:hover {
@@ -464,11 +464,29 @@
 
 /* GS 전용 */
 .gs-theme .floating-button {
-  background-color: #e67e22; /* 주황 예시 */
+  background-color: rgb(0, 87, 63);
 }
 
 .gs-theme .floating-button:hover {
   background-color: #1d1d1d;
+}
+
+.gs-theme .section__title,
+.gs-theme .project-section h2 {
+  color: rgb(0, 87, 63);
+}
+
+.gs-theme .section__title::after,
+.gs-theme .project-section h2::after {
+  background-color: rgb(0, 87, 63);
+}
+
+.gs-theme .hero-button {
+  background-color: rgb(0, 87, 63);
+}
+
+.gs-theme .hero-button:hover {
+  background-color: rgb(0, 87, 63);
 }
 
 /* 반응형 대응 */

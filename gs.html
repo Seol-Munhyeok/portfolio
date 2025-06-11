@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="ko" class="gs-theme">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="shortcut icon" href="./media/favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="./css/reset.css" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./css/style2.css" />
+    <script src="./js/main.js" defer></script>
+    <script
+      src="https://kit.fontawesome.com/905322dca8.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <title>GS THE FRESH 사전예약 시스템</title>
+  </head>
+  <body class="gs-theme">
+    <!-- Header -->
+    <header class="header">
+      <nav class="nav container">
+        <div class="nav__logo">
+          <img class="nav__img" src="./media/logo-trans.png" alt="Seol Logo" />
+          <a href="./설문혁201911938.html" class="nav__brand"
+            >설문혁 포트폴리오</a
+          >
+        </div>
+        <div class="nav__toggle" id="nav-toggle">
+          <i class="fas fa-bars"></i>
+        </div>
+        <div class="nav__menu" id="nav__menu">
+          <div class="nav__close" id="nav-close">
+            <i class="fas fa-times"></i>
+          </div>
+          <ul class="nav__list">
+            <li class="nav__item">
+              <a href="./설문혁201911938.html#home" class="nav__link">Home</a>
+            </li>
+            <li class="nav__item">
+              <a href="./설문혁201911938.html#work" class="nav__link">Work</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="project-hero-video">
+      <video
+        class="hero-video"
+        src="./media/gs-demo.mp4"
+        autoplay
+        muted
+        loop
+        playsinline
+      ></video>
+      <div class="hero-overlay">
+        <h1>GS THE FRESH</h1>
+        <p>사전예약 상품 관리를 위한 자동화 시스템</p>
+        <p style="font-size: 1.2rem; margin-top: 1rem">
+          제작 중인 프로젝트입니다
+        </p>
+      </div>
+    </section>
+
+    <!-- 프로젝트 개요 -->
+    <section class="project-section">
+      <h2 class="section__title">프로젝트 개요</h2>
+
+      <!-- 이미지 슬라이더 영역 -->
+      <div class="image-slider__wrapper">
+        <div class="image-slider">
+          <div class="image-slider__track">
+            <img src="./media/gs1.png" alt="스크린샷 1" />
+            <img src="./media/gs2.png" alt="스크린샷 2" />
+            <img src="./media/gs3.png" alt="스크린샷 3" />
+          </div>
+        </div>
+        <button class="image-slider__btn prev">&lt;</button>
+        <button class="image-slider__btn next">&gt;</button>
+      </div>
+
+      <p>
+        <strong>GS THE FRESH 사전예약 시스템</strong>은 기존의 수기 엑셀 기반
+        사전예약 관리 프로세스를 웹 기반으로 자동화한 프로젝트입니다.<br />
+        사용자 친화적인 UI와 관리자 페이지를 통해 효율적인 상품 예약과 관리가
+        가능합니다.
+      </p>
+    </section>
+
+    <!-- 개발 동기 -->
+    <section class="project-section bg-grey-1">
+      <h2 class="section__title">개발 동기</h2>
+      <p>
+        본 프로젝트는 <strong>GS THE FRESH 아르바이트 경험</strong> 중 발견한
+        비효율적인 업무 프로세스에서 출발했습니다.<br />
+        기존에는 사전예약 상품 주문을
+        <strong>카카오톡 채팅방으로 수집</strong>하고 이를 다시
+        <strong>수기로 엑셀에 입력</strong>하는 방식이었습니다.<br />
+        이러한 반복적이고 오류 가능성이 높은 프로세스를 개선하기 위해 자동화
+        시스템 개발을 진행하게 되었습니다.
+      </p>
+    </section>
+
+    <!-- 주요 기능 -->
+    <section class="project-section">
+      <h2 class="section__title">주요 기능</h2>
+      <ul>
+        <li>
+          <span class="icon">🛍️</span>
+          사용자는 <strong>오늘의 사전예약 상품</strong>을 바로 확인하고 예약할
+          수 있습니다.
+        </li>
+        <li>
+          <span class="icon">🔐</span>
+          <strong>관리자 로그인</strong> 후 관리자 페이지에 접근 가능합니다.
+        </li>
+        <li>
+          <span class="icon">📊</span>
+          관리자 페이지에서 <strong>사전예약 현황 조회</strong> 기능 제공.
+        </li>
+        <li>
+          <span class="icon">📈</span>
+          관리자 페이지에서 <strong>예약 통계, 인기 상품 분석</strong> 기능
+          제공.
+        </li>
+        <li>
+          <span class="icon">🗂️</span>
+          사전예약 데이터 <strong>엑셀 다운로드</strong> 기능 제공.
+        </li>
+      </ul>
+    </section>
+
+    <!-- 개발 환경 -->
+    <section class="project-section bg-grey-1">
+      <h2 class="section__title">개발 환경</h2>
+      <div class="env__stack-card-container">
+        <!-- Frontend -->
+        <div class="env__stack-card env-frontend">
+          <h3 class="env__stack-title">🖥️ Frontend</h3>
+          <p class="section__description">
+            프론트엔드 개발에 사용한 기술입니다.
+          </p>
+          <div class="env__stack-list">
+            <img
+              src="https://img.shields.io/badge/vue.js-4FC08D?style=for-the-badge&logo=vue.js&logoColor=white"
+            />
+            <img
+              src="https://img.shields.io/badge/html5-E34F26?style=for-the-badge&logo=html5&logoColor=white"
+            />
+            <img
+              src="https://img.shields.io/badge/css3-1572B6?style=for-the-badge&logo=css3&logoColor=white"
+            />
+          </div>
+        </div>
+
+        <!-- Backend -->
+        <div class="env__stack-card env-backend">
+          <h3 class="env__stack-title">📟 Backend</h3>
+          <p class="section__description">
+            백엔드 개발 및 API 서버 구축에 사용한 기술입니다.
+          </p>
+          <div class="env__stack-list">
+            <img
+              src="https://img.shields.io/badge/springboot-6DB33F?style=for-the-badge&logo=springboot&logoColor=white"
+            />
+            <img
+              src="https://img.shields.io/badge/mariaDB-4479A1?style=for-the-badge&logo=mariaDB&logoColor=white"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Floating Button -->
+    <div
+      class="floating-button"
+      onclick="window.scrollTo({top: 0, behavior: 'smooth'})"
+    >
+      <i class="fas fa-arrow-up floating-button-icon"></i>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <p class="footer__title">설문혁</p>
+      <div class="footer__social">
+        <a
+          href="https://github.com/Seol-Munhyeok"
+          target="_blank"
+          title="설문혁 깃허브 링크"
+        >
+          <i class="fa-brands fa-github footer__icon"></i>
+        </a>
+        <a
+          href="https://www.instagram.com/surveyhuk/"
+          target="_blank"
+          title="설문혁 인스타그램 링크"
+        >
+          <i class="fa-brands fa-instagram footer__icon"></i>
+        </a>
+      </div>
+      <p class="footer__info">
+        부경대학교 컴퓨터공학과 설문혁<br />
+        Email: abc1234568@naver.com
+      </p>
+      <p class="footer__copy">
+        Copyright &copy; 2025 설문혁 All rights reserved.
+      </p>
+    </footer>
+  </body>
+</html>
