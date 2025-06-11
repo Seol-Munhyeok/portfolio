@@ -68,3 +68,25 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 });
+
+document.addEventListener('DOMContentLoaded', () => {
+  const observerOptions = { threshold: 0.5 };
+  const processSection = document.querySelector('.process-flow');
+  const arrow = document.querySelector('.process-arrow');
+  const afterStep = document.querySelector('.process-step.after');
+
+  if (processSection) {
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          arrow.style.opacity = 1;
+          setTimeout(() => {
+            afterStep.classList.remove('hidden');
+          }, 600);
+        }
+      });
+    }, observerOptions);
+
+    observer.observe(processSection);
+  }
+});
