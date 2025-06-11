@@ -164,6 +164,67 @@
   margin-bottom: 2rem;
 }
 
+.env__stack-card-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+  padding: 0 8rem;
+}
+
+.env__stack-card {
+  background-color: #f9f9f9;
+  border-radius: 1rem;
+  padding: 2rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease,
+    background-color 0.3s ease;
+}
+
+.env__stack-card:hover {
+  transform: translateY(-5px) scale(1.03);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+  background-color: #f0fbfc;
+}
+
+.env__stack-title {
+  font-size: 1.4rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.env__stack-card .section__description {
+  font-size: 0.95rem;
+  color: #666;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.env__stack-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.75rem;
+}
+
+.env__stack-card.env-frontend {
+  background-color: #f0fbfc;
+}
+
+.env__stack-card.env-backend {
+  background-color: #f9fef4;
+}
+
+.env__stack-card.env-collab {
+  background-color: #fdf8f8;
+}
+
 .project-section h3 {
   font-size: 1.3rem;
   font-weight: 700;
@@ -242,7 +303,7 @@
   gap: 1.5rem;
   padding: 0 2rem;
   max-width: 1400px;
-  margin: 0 auto;
+  margin: 2rem auto;
 }
 
 .problem-type-card {
@@ -264,7 +325,7 @@
 
 .problem-type-card img {
   width: 130%;
-  max-width: 220px;
+  max-width: 180px;
   height: auto;
   margin-bottom: 1rem;
   border-radius: 0.5rem;
@@ -290,7 +351,90 @@
   padding: 0 0.5rem;
 }
 
+.team-card__container {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 1.5rem;
+  padding: 0 1rem;
+}
+
+.team-card {
+  background-color: #ffffff;
+  border-radius: 1rem;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+  padding: 2rem 1rem;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.team-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+.team-card__img {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 1rem;
+}
+
+.team-card__name {
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.team-card__name a {
+  color: #00aacc;
+  text-decoration: none;
+  display: inline-block;
+  text-align: center;
+  width: 100%;
+}
+
+.team-card__name a:hover {
+  text-decoration: underline;
+}
+
+.team-card__role {
+  font-size: 0.9rem;
+  color: #555;
+  line-height: 1.6;
+}
+
+.team-card__role p {
+  margin: 0.3rem 0;
+}
+
+.team-card__guide {
+  text-align: center;
+  margin-top: 1.5rem;
+  font-size: 0.9rem;
+  color: #777;
+}
+
 /* 반응형 대응 */
+@media (max-width: 1200px) {
+  .team-card__container {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .team-card__container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 480px) {
+  .team-card__container {
+    grid-template-columns: 1fr;
+  }
+}
+
 @media (max-width: 1200px) {
   .problem-type-cards {
     grid-template-columns: repeat(3, 1fr);
@@ -306,11 +450,11 @@
 @media (max-width: 830px) {
   .image-slider__btn.prev {
     left: 10px;
-    color: #fff; /* 작은 화면에서 흰색으로 */
+    color: #fff;
   }
 
   .image-slider__btn.next {
     right: 10px;
-    color: #fff; /* 작은 화면에서 흰색으로 */
+    color: #fff;
   }
 }
