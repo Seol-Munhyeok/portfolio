@@ -416,7 +416,74 @@
   color: #777;
 }
 
+.team-card__container--4 {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+  padding: 0 1rem;
+}
+
+/* COBY 전용 테마 */
+.coby-theme .section__title {
+  color: #9b59b6;
+}
+
+.coby-theme .section__title::after {
+  background-color: #9b59b6;
+}
+
+.coby-theme .hero-button {
+  background-color: #9b59b6;
+}
+
+.coby-theme .hero-button:hover {
+  background-color: #8e44ad;
+}
+
+/* Battlecoding 전용용 */
+.battlecoding-theme .floating-button {
+  background-color: #00aacc;
+}
+
+.battlecoding-theme .floating-button:hover {
+  background-color: #1d1d1d;
+}
+
+/* COBY 전용 */
+.coby-theme .floating-button {
+  background-color: #9b59b6;
+}
+
+.coby-theme .floating-button:hover {
+  background-color: #1d1d1d;
+}
+
+.coby-theme .team-card__name a {
+  color: #9b59b6;
+}
+
+/* GS 전용 */
+.gs-theme .floating-button {
+  background-color: #e67e22; /* 주황 예시 */
+}
+
+.gs-theme .floating-button:hover {
+  background-color: #1d1d1d;
+}
+
 /* 반응형 대응 */
+@media (max-width: 1200px) {
+  .team-card__container--4 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .team-card__container--4 {
+    grid-template-columns: 1fr;
+  }
+}
+
 @media (max-width: 1200px) {
   .team-card__container {
     grid-template-columns: repeat(3, 1fr);

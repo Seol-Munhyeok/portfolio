@@ -34,7 +34,7 @@ body {
   top: 0;
   left: 0;
   width: 100%;
-  z-index: 100;
+  z-index: 2000;
 }
 
 .nav {
@@ -79,6 +79,9 @@ body {
   font-weight: 700;
 }
 
+.project-hero-video {
+  z-index: 1001;
+}
 .active-link::after,
 .nav__link:hover::after {
   background-color: #2ecc71;
@@ -454,6 +457,8 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+
+  z-index: 1000;
 }
 
 .floating-button:hover {

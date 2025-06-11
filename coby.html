@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="shortcut icon" href="./media/favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="./css/reset.css" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./css/style2.css" />
+    <script src="./js/main.js" defer></script>
+    <script
+      src="https://kit.fontawesome.com/905322dca8.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <title>COBY - 프로젝트 상세</title>
+  </head>
+  <body class="coby-theme">
+    <!-- Header -->
+    <header class="header">
+      <nav class="nav container">
+        <div class="nav__logo">
+          <img class="nav__img" src="./media/logo-trans.png" alt="Seol Logo" />
+          <a href="./설문혁201911938.html" class="nav__brand"
+            >설문혁 포트폴리오</a
+          >
+        </div>
+        <div class="nav__toggle" id="nav-toggle">
+          <i class="fas fa-bars"></i>
+        </div>
+        <div class="nav__menu" id="nav__menu">
+          <div class="nav__close" id="nav-close">
+            <i class="fas fa-times"></i>
+          </div>
+          <ul class="nav__list">
+            <li class="nav__item">
+              <a href="./설문혁201911938.html#home" class="nav__link">Home</a>
+            </li>
+            <li class="nav__item">
+              <a href="./설문혁201911938.html#work" class="nav__link">Work</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="project-hero-video">
+      <video
+        class="hero-video"
+        src="./media/coby-demo.mp4"
+        autoplay
+        muted
+        loop
+        playsinline
+      ></video>
+      <div class="hero-overlay">
+        <h1>COBY</h1>
+        <p>
+          실시간으로 다른 사람과 함께 코딩 테스트 문제를 풀고 경쟁하는 플랫폼
+        </p>
+        <p style="font-size: 1.2rem; margin-top: 1rem">
+          제작 중인 프로젝트입니다
+        </p>
+      </div>
+    </section>
+
+    <!-- 프로젝트 개요 -->
+
+    <section class="project-section">
+      <h2 class="section__title">프로젝트 개요</h2>
+
+      <!-- 이미지 슬라이더 영역 -->
+      <div class="image-slider__wrapper">
+        <div class="image-slider">
+          <div class="image-slider__track">
+            <img src="./media/coby11.png" alt="스크린샷 0" />
+            <img src="./media/coby22.png" alt="스크린샷 1" />
+            <img src="./media/coby3.png" alt="스크린샷 2" />
+            <img src="./media/coby4.png" alt="스크린샷 3" />
+            <img src="./media/coby5.png" alt="스크린샷 4" />
+          </div>
+        </div>
+        <button class="image-slider__btn prev">&lt;</button>
+        <button class="image-slider__btn next">&gt;</button>
+      </div>
+
+      <p>
+        <strong>COBY(Coding Online Battle With You)</strong>는 실시간 코딩
+        테스트 대결을 지원하는 플랫폼입니다. <br />
+        사용자는 입장 코드를 통해 방을 만들고 문제 풀이와 경쟁을 동시에 경험할
+        수 있습니다. <br /><br />※ 현재는 개발 진행 중이며 추후 완성 시 서비스
+        오픈 예정입니다.
+      </p>
+    </section>
+
+    <!-- Floating Button -->
+    <div
+      class="floating-button"
+      onclick="window.scrollTo({ top: 0, behavior: 'smooth' })"
+    >
+      <i class="fas fa-arrow-up floating-button-icon"></i>
+    </div>
+
+    <!-- 개발 환경 -->
+    <section class="project-section bg-grey-1">
+      <h2 class="section__title">개발 환경</h2>
+      <div class="env__stack-card-container">
+        <!-- Frontend -->
+        <div class="env__stack-card env-frontend">
+          <h3 class="env__stack-title">🖥️ Frontend</h3>
+          <p class="section__description">
+            프론트엔드 개발에 사용한 기술입니다.
+          </p>
+          <div class="env__stack-list">
+            <img
+              src="https://img.shields.io/badge/react-61DAFB?style=for-the-badge&logo=react&logoColor=white"
+            />
+            <img
+              src="https://img.shields.io/badge/figma-F24E1E?style=for-the-badge&logo=figma&logoColor=white"
+            />
+          </div>
+        </div>
+
+        <!-- Backend -->
+        <div class="env__stack-card env-backend">
+          <h3 class="env__stack-title">📟 Backend</h3>
+          <p class="section__description">
+            백엔드 및 채점 서버 개발에 사용한 기술입니다.
+          </p>
+          <div class="env__stack-list">
+            <img
+              src="https://img.shields.io/badge/springboot-6DB33F?style=for-the-badge&logo=springboot&logoColor=white"
+            />
+            <img
+              src="https://img.shields.io/badge/fastapi-009688?style=for-the-badge&logo=fastapi&logoColor=white"
+            />
+            <img
+              src="https://img.shields.io/badge/mysql-4479A1?style=for-the-badge&logo=mysql&logoColor=white"
+            />
+            <img
+              src="https://img.shields.io/badge/JWT-000000?style=for-the-badge&logo=jsonwebtokens&logoColor=white"
+            />
+          </div>
+        </div>
+
+        <!-- Deployment & Infra -->
+        <div class="env__stack-card env-collab">
+          <h3 class="env__stack-title">🚀 Deployment & Infra</h3>
+          <p class="section__description">배포 및 인프라 환경입니다.</p>
+          <div class="env__stack-list">
+            <img
+              src="https://img.shields.io/badge/docker-2496ED?style=for-the-badge&logo=docker&logoColor=white"
+            />
+            <img
+              src="https://img.shields.io/badge/EC2-FF9900?style=for-the-badge&logo=amazonec2&logoColor=white"
+            />
+            <img
+              src="https://img.shields.io/badge/RDS-527FFF?style=for-the-badge&logo=amazonrds&logoColor=white"
+            />
+            <img
+              src="https://img.shields.io/badge/github-181717?style=for-the-badge&logo=github&logoColor=white"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 팀원 소개 -->
+    <section class="project-section section--alt">
+      <h2 class="section__title">팀원 소개</h2>
+      <div class="team-card__container--4 container">
+        <!-- 설문혁 -->
+        <div class="team-card">
+          <img
+            class="team-card__img"
+            src="https://github.com/Seol-Munhyeok.png?size=100"
+            alt="설문혁 프로필"
+          />
+          <h3 class="team-card__name">
+            <a href="https://github.com/Seol-Munhyeok" target="_blank"
+              >설문혁</a
+            >
+          </h3>
+          <div class="team-card__role">
+            <p><strong>백엔드 구축</strong></p>
+            <p>API 설계 및 구현</p>
+            <p>DB 설계 및 관리</p>
+            <p>인프라 환경 구성</p>
+          </div>
+        </div>
+
+        <!-- 김정우 -->
+        <div class="team-card">
+          <img
+            class="team-card__img"
+            src="https://github.com/custiya.png?size=100"
+            alt="김정우 프로필"
+          />
+          <h3 class="team-card__name">
+            <a href="https://github.com/custiya" target="_blank">김정우</a>
+          </h3>
+          <div class="team-card__role">
+            <p><strong>채점서버 구축</strong></p>
+            <p>FastAPI 서버 개발</p>
+            <p>도커 환경 구축</p>
+            <p>서버 배포 자동화</p>
+          </div>
+        </div>
+
+        <!-- 이경민 -->
+        <div class="team-card">
+          <img
+            class="team-card__img"
+            src="https://github.com/gyeongmin-363.png?size=100"
+            alt="이경민 프로필"
+          />
+          <h3 class="team-card__name">
+            <a href="https://github.com/gyeongmin-363" target="_blank"
+              >이경민</a
+            >
+          </h3>
+          <div class="team-card__role">
+            <p><strong>프론트 구축</strong></p>
+            <p>메인 페이지 UI 개발</p>
+            <p>게임 플레이 화면 구성</p>
+            <p>API 연동 구현</p>
+          </div>
+        </div>
+
+        <!-- 오종현 -->
+        <div class="team-card">
+          <img
+            class="team-card__img"
+            src="https://github.com/dydtn4814.png?size=100"
+            alt="오종현 프로필"
+          />
+          <h3 class="team-card__name">
+            <a href="https://github.com/dydtn4814" target="_blank">오종현</a>
+          </h3>
+          <div class="team-card__role">
+            <p><strong>프론트 구축</strong></p>
+            <p>로그인 / 회원가입 UI 개발</p>
+            <p>방 생성 및 입장 화면 구성</p>
+            <p>반응형 UI 개선</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- 안내 문구 -->
+      <p class="team-card__guide">
+        ※ 이름을 클릭하면 Github 링크로 이동합니다.
+      </p>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <p class="footer__title">설문혁</p>
+      <div class="footer__social">
+        <a
+          href="https://github.com/Seol-Munhyeok"
+          target="_blank"
+          title="설문혁 깃허브 링크"
+        >
+          <i class="fa-brands fa-github footer__icon"></i>
+        </a>
+        <a
+          href="https://www.instagram.com/surveyhuk/"
+          target="_blank"
+          title="설문혁 인스타그램 링크"
+        >
+          <i class="fa-brands fa-instagram footer__icon"></i>
+        </a>
+      </div>
+      <p class="footer__info">
+        부경대학교 컴퓨터공학과 설문혁<br />
+        Email: abc1234568@naver.com
+      </p>
+      <p class="footer__copy">
+        Copyright &copy; 2025 설문혁 All rights reserved.
+      </p>
+    </footer>
+  </body>
+</html>
