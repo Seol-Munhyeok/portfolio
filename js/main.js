@@ -1,4 +1,5 @@
 // main.js
+/* 섹션 화면 올라오는 효과*/
 const sections = document.querySelectorAll('.section, .project-section');
 const options = { threshold: 0.1 };
 
@@ -15,6 +16,7 @@ sections.forEach((section) => {
   observer.observe(section);
 });
 
+/* 모바일 화면에서 토글 구현 */
 const navToggle = document.getElementById('nav-toggle');
 const navMenu = document.getElementById('nav-menu');
 
@@ -43,6 +45,7 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 });
 
+/* 이미지 슬라이더 */
 document.addEventListener('DOMContentLoaded', () => {
   const sliderWrappers = document.querySelectorAll('.image-slider__wrapper');
 
@@ -57,18 +60,35 @@ document.addEventListener('DOMContentLoaded', () => {
       track.style.transform = `translateX(-${index * 100}%)`;
     }
 
+    function startAutoSlide() {
+      return setInterval(() => {
+        index = (index + 1) % images.length;
+        updateSlider();
+      }, 6000); // 6초마다 넘김
+    }
+
+    let autoSlideInterval = startAutoSlide();
+
+    function resetAutoSlide() {
+      clearInterval(autoSlideInterval);
+      autoSlideInterval = startAutoSlide();
+    }
+
     prevBtn.addEventListener('click', () => {
       index = (index - 1 + images.length) % images.length;
       updateSlider();
+      resetAutoSlide();
     });
 
     nextBtn.addEventListener('click', () => {
       index = (index + 1) % images.length;
       updateSlider();
+      resetAutoSlide();
     });
   });
 });
 
+/* 개발 동기에서 화살표로 이미지 보이게 하기 */
 document.addEventListener('DOMContentLoaded', () => {
   const observerOptions = { threshold: 0.5 };
   const processSection = document.querySelector('.process-flow');
